@@ -1,4 +1,5 @@
-# Build and Release Folders
+# Build Folders
 sass/
 jade/
 design/
+prepros.cfg
