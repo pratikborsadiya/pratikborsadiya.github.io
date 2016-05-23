@@ -1,0 +1,25 @@
+{
+	"name": "pratikborsadiya.in",
+	"description": "This is Pratik Borsadiya on internet!",
+	"author": "Pratik Borsadiya",
+	"devDependencies": {
+		"grunt": "^0.4.5",
+		"grunt-contrib-watch": "~1.0.0",
+		"grunt-contrib-jade": "^0.15.0",
+		"grunt-autoprefixer": "^1.0.1",
+		"grunt-sass": "^1.1.0",
+		"grunt-shell": "^1.1.2",
+		"load-grunt-tasks": "~0.6.0",
+		"time-grunt": "~0.4.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:pratikborsadiya/pratikborsadiya.github.io.git"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"dependencies": {
+		"node-sass": "^3.4.0"
+	}
+}
