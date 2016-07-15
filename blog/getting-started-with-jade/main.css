@@ -1,7 +1,5 @@
 @media (max-width: 760px) {
-	body {
-		font-size: 14px;
-	}
+	body { font-size: 14px; }
 }
 .awesome-jade .hero {
 	display: -ms-flexbox;
@@ -74,7 +72,6 @@
 .awesome-jade #disqus_thread {
 	padding: 4.2em 0;
 }
-
 @media (min-width: 760px) {
 	.awesome-jade .two-images {
 		display: -ms-flexbox;
@@ -91,7 +88,6 @@
 		    flex-basis: auto;
 	}
 }
-
 .awesome-jade code {
 	padding: 2px 4px;
 	font-size: 90%;
@@ -99,13 +95,11 @@
 	background-color: #f9f2f4;
 	border-radius: 4px;
 }
-
-.awesome-jade .referances-list {
-	list-style: 
+.awesome-jade section > p a {
+	color: #009cdc;
 }
-
 .awesome-jade .referances-list a {
 	font-size: 1.2em;
 	line-height: 1.5;
-	color: #009cdc
+	color: #009cdc;
 }
