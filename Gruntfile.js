@@ -2,12 +2,15 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
+			options: {
+                livereload: true
+            },
 			scss: {
 				files: ['sass/*.sass', 'sass/**/*.sass'],
 				tasks: ['sass', 'autoprefixer']
 			},
 			jade: {
-				files: ['jade/*.jade'],
+				files: ['jade/**/*.jade'],
 				tasks: ['jade']
 			}
 		},
@@ -17,7 +20,7 @@ module.exports = function(grunt) {
 					pretty: false
 				},
 				files: [{
-					src: ['{,jade/**/}*.jade', '!{,jade/**/}_*.jade'],
+					src: ['**/*.jade', '!**/_*.jade'],
 					dest: "./",
 					ext: ".html",
 					cwd: "jade/",
@@ -47,7 +50,7 @@ module.exports = function(grunt) {
 				map: false
 			},
 			dist: {
-				src: ['css/home.css']
+				src: ['css/home.css', 'css/blog.css']
 			}
 		}
 	});
