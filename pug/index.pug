@@ -1,0 +1,74 @@
+doctype html
+html
+	head
+		title Pratik Borsadiya
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name="description", content="Frontend Engineer, From Amrapur, Jamnagar, Gujarat. I like music, nature, computer and computer games.")
+		meta(name='google-site-verification', content='DzGF1wORJHztgVQ9T_p88R5LuxQwf4_dr2c02Cfz_ug')
+
+		//- CSS
+		link(rel='stylesheet', href='css/home.css')
+
+	body
+
+		include includes/_icons.pug
+
+		main.home
+			.home__info
+				img.profile-image(src='img/pratik-borsadiya.jpg')
+				h1.greet-message Hello, I'm Pratik Borsadiya.
+				p.designation-message Front-End engineer @
+					a(href='https://gridle.io', target='_blank') Gridle
+				.social
+					a.social__link(href='https://twitter.com/pratikborsadiya', target='_blank')
+						svg: use(xlink:href='#icon-twitter')
+					a.social__link(href='https://www.linkedin.com/in/pratikborsadiya', target='_blank')
+						svg: use(xlink:href='#icon-linkedin')
+					a.social__link(href='https://github.com/pratikborsadiya', target='_blank')
+						svg: use(xlink:href='#icon-github')
+					a.social__link(href='https://gitlab.com/pratikborsadiya', target='_blank')
+						svg: use(xlink:href='#icon-gitlab')
+
+			.home__main
+				nav.site__nav
+					ul
+						li: a.site__nav-item(href='#about-me', data-toggle='about-section') About Me
+						li: a.site__nav-item(href='#blog', data-toggle='article-section') Blog
+
+				//- About Section
+				.home__about
+					p Hey there, #[br] I am Pratik from Gujarat.
+					p I work at #[a(href='https://gridle.io', target='_blank') Gridle] as a front-end engineer. Developing beautiful interfaces with HTML, CSS and JavaScript is my passion and profession for almost past two years.
+
+					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank') Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank') Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank') Great Plains]. I like to play computer games. Some of my favorite are Age Of Empires 3, FarCry-3 & 4, The Witcher series, Assassin’s Creed – Black Flag & Royal Revolt 2.
+
+				//- Blog Section
+				.home__blog
+					a.article(href="https://medium.com/@pratikborsadiya/appriciate-the-good-deeds-639616491ef6", target="_blank")
+						p.article__date 17 December, 2016
+						h3.article__title Appreciate the good while you disparage the bad
+						p.article__description If you scold a person to make sure that he won’t do the same mistake again, also appreciate him for his good deeds to make sure that it will happen again and again.
+
+					a.article(href='/blog/vali-admin/')
+						p.article__date 16 December, 2016
+						h3.article__title Freebie : Vali Admin
+						p.article__description A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Jade.
+
+					a.article(href='/blog/getting-started-with-jade/')
+						p.article__date 15 July, 2016
+						h3.article__title Be awesome with jade
+						p.article__description Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.
+
+		script(type='text/javascript').
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-72504830-1', 'auto');
+			ga('send', 'pageview');
+
+		//- Scripts
+		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+		script(type='text/javascript', src='js/app.js')

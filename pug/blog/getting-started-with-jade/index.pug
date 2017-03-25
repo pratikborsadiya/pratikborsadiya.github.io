@@ -1,0 +1,134 @@
+extends ../../layouts/_layout-blog.pug
+
+block meta
+	// Twitter meta
+	meta(property='twitter:card', content='summary_large_image')
+	meta(property='twitter:creator', content='@pratikborsadiya')
+
+	// Open Graph Meta
+	meta(property='og:type', content='article')
+	meta(property='og:site_name', content="Pratik Borsadiya's Blog")
+	meta(property='og:title', content="Be awesome with Jade | Pratik Borsadiya's blog")
+	meta(name='description', content='Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.')
+	meta(property='og:url', content='http://pratikborsadiya.in/blog/getting-started-with-jade')
+	meta(property='og:image', content='http://pratikborsadiya.in/blog/getting-started-with-jade/hero-social.png')
+	meta(property='og:description', content='Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.')
+
+block title
+	title Be awesome with Jade | Pratik Borsadiya's blog
+
+block content
+	main.awesome-jade
+		article(itemscope='', itemtype='http://schema.org/Article')
+			meta(itemprop='image', content='http://pratikborsadiya.in/blog/getting-started-with-jade/hero-social.png')
+			header.hero
+				h1.article-title(itemprop='name') Be awesome with Jade
+
+			section(itemprop='articleSection')
+				p
+					| A couple of month ago, I was working on a website development project, the client needed to develop a static site to represent their business on-line, So I developed them a static HTML site and they were happy, but after the development is complete they asked me to change some details in website footer and as it was developed with only HTML I had to go through all 36 static pages and change the details in the footer. I realized that managing static HTML sites is very hard and tedious.
+				p
+					| The solution was to move to some templating engine which would provide the modularity to the common element of the site. I tried to find a good templating engine suitable for static site development and I met Jade.
+				p
+					| Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.
+				p Let’s take a look at some beautiful features of jade
+
+			section(itemprop='articleSection')
+				h3.section-title 1. Elegant and concise syntax
+				p
+					| The syntax is one of the reasons why jade is so awesome. Jade follows indented flavor of nesting statements like python, so you don't need to close any tag. It allows you to write neat HTML tags without angular brackets thus saves a hell lot of keystrokes :).
+				p
+					| Also it’s not only used to create HTML markups it supports any XML typed language like SVG.
+				p
+					| Take a look at a basic page structure built with jade:
+					br
+					small.hint
+						| Hint: hover over following code and click view compiled button bellow to see the jade code compiled into HTML
+				iframe(height='500', scrolling='no', src='http://codepen.io/pratikborsadiya/embed/EybGXd/?height=500&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+					| See the Pen
+					a(href='http://codepen.io/pratikborsadiya/pen/EybGXd/') A Basic jade demo
+					|  by Pratik Borsadiya (
+					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					| ) on
+					a(href='http://codepen.io') CodePen.
+
+			section(itemprop='articleSection')
+				h3.section-title 2. Variables, Loops & Control structure
+				p
+					| As Jade is built on top of Node js it allows you to use all the features a programming language can provide like variables, loops and control structure.
+				p
+					| So you can develop lightweight CMS like blogs. In fact this blog is also developed with jade.
+				p Let's see how we can use variables and loops in jade
+				iframe(height='500', scrolling='no', src='//codepen.io/pratikborsadiya/embed/pbpygk/?height=500&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+					| See the Pen
+					a(href='http://codepen.io/pratikborsadiya/pen/pbpygk/')
+						| A demonstration of variables, loops and controls structures in Jade	|  by Pratik Borsadiya (
+					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					| ) on
+					a(href='http://codepen.io') CodePen.
+
+			section(itemprop='articleSection')
+				h3.section-title 3. Mixins
+				p
+					| A mixin is similar to the function. It allows you to pass parameters to it and generate template based on the parameters.
+				p Let's define a mixin and user it to create some template
+				iframe(height='300', scrolling='no', src='//codepen.io/pratikborsadiya/embed/jAYqaZ/?height=300&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+					| See the Pen
+					a(href='http://codepen.io/pratikborsadiya/pen/jAYqaZ/') A basic example of using mixins in Jade	|  by Pratik Borsadiya (
+					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					| ) on
+					a(href='http://codepen.io') CodePen.
+
+			section(itemprop='articleSection')
+				h3.section-title 4. Template importing & inheritance
+				p
+					| Jade allows you to include the contents of one jade file into another. It also allows you to extend a layout or parent template.
+				p
+					| Consider following example where we include
+					code head.jade
+					|  and
+					code foot.jade
+					|  external files using
+					code include
+					|  keyword.
+				img.img-responsive(src='jade-include-template.png', data-action='zoom')
+				p
+					| The following example indicates how we can create a template
+					code layout.jade
+					|  and extend the template in
+					code page.jade
+					| .
+				.two-images
+					img.img-responsive(src='jade-layout.png', data-action='zoom')
+					img.img-responsive(src='jade-sub-layout.png', data-action='zoom')
+
+			section(itemprop='articleSection')
+				h3.section-title Conclusion:
+				p
+					| While we went through the basic concepts of Jade. Jade is much more then we discussed here. Take a look at the links mentioned bellow in further reading if you want to learn more about Jade.
+				p
+					| If you liked this post, do share it. Don't forget to leave your comments and feedback in the comment box bellow.
+				p Happy Jading!
+				p  P.S. Jade has been renamed to pug due to a&nbsp;
+					a(href='https://github.com/pugjs/pug/issues/2184', target='_blank') copyright
+					|  claim. So the future releases of Jade will be named as pug.
+
+			section(itemprop='articleSection')
+				h3.section-title Further reading
+				ul.referances-list
+					li
+						a(href='http://jade-lang.com/', target='_blank') Official site of Jade language
+					li
+						a(href='https://www.youtube.com/watch?v=wzAWI9h3q18', target='_blank') A video to help you get started with Jade
+					li
+						a(href='http://naltatis.github.io/jade-syntax-docs/', target='_blank') In-depth explanation about Jade syntax.
+					li
+						a(href='http://html2jade.org/', target='_blank') A HTML to Jade or vice versa converter
+			section
+				#disqus_thread
+
+block javascript
+	// Scripts
+	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+	script(type='text/javascript', src='/js/transition.js')
+	script(type='text/javascript', src='/js/zoom.min.js')

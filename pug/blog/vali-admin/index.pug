@@ -1,0 +1,44 @@
+extends ../../layouts/_layout-blog.pug
+
+block meta
+	// Twitter meta
+	meta(property='twitter:card', content='summary_large_image')
+	meta(property='twitter:creator', content='@pratikborsadiya')
+
+	// Open Graph Meta
+	meta(property='og:type', content='article')
+	meta(property='og:site_name', content="Pratik Borsadiya's Blog")
+	meta(property='og:title', content="Vali Admin | Pratik Borsadiya's blog")
+	meta(name='description', content="Vali is a free bootstrap based admin dashboard theme. Developed using SASS and JADE it's fully customizable and very lightweight.")
+	meta(property='og:url', content='http://pratikborsadiya.in/blog/vali-admin')
+	meta(property='og:image', content='http://pratikborsadiya.in/blog/vali-admin/hero-social.png')
+	meta(property='og:description', content="Vali is a free bootstrap admin dashboard theme. Developed using SASS and JADE it's fully customizable and very lightweight.")
+
+block title
+	title Vali Admin | Pratik Borsadiya's blog
+
+block content
+	main.vali-admin
+		article(itemscope='', itemtype='http://schema.org/Article')
+			meta(itemprop='image', content='http://pratikborsadiya.in/blog/vali-admin/hero-social.png')
+			header
+				h1 Vali Admin
+				p A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Jade.
+				p
+					a.btn.btn-primary(href='https://github.com/pratikborsadiya/vali-admin/archive/master.zip') Download
+					a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin', target='_blank') Github Project
+
+			section.container
+				img.banner-image(src='vali-admin.png', data-action='zoom')
+				h2.section-title Getting started
+				p.info-text Vali is a responsive admin theme built with bootstrap 3, SASS and jade. It's fully modular so you don't have to copy the code which you don't need. Modularity is achieved using component based stylesheet and javascript.
+				p.info-text If you like the theme do share it with your friends. If you have any issues or feedback regarding theme let me know in comments . Pull requests are always welcome.
+
+			section.container
+				#disqus_thread
+
+block javascript
+	// Scripts
+	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+	script(type='text/javascript', src='/js/transition.js')
+	script(type='text/javascript', src='/js/zoom.min.js')

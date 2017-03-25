@@ -1,0 +1,190 @@
+.home
+	min-height: 100vh
+
+@media (min-width: 960px)
+	.home
+		display: flex
+
+.home__info
+	@extend .text-center
+	@extend .flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	flex: 1 0 auto
+	padding: 3em 1.75em
+	background-color: #291b2c
+	color: #fff
+	.profile-image
+		width: 100%
+		max-width: 100px
+		border-radius: 4px
+		box-shadow: 0 5px 10px #291b2c
+	.greet-message
+		font-weight: 400
+		font-size: 1.9em
+		margin: 1em 0 0.1em
+	.designation-message
+		font-family: 'Inconsolata', Consolas, monospace
+		font-size: 1.125em
+		a
+			padding: 4px
+			border-bottom: 1px solid #fff
+			color: #fff
+			transition: all 0.3s ease-in-out
+			&:focus,
+			&:hover,
+			&:active
+				text-decoration: none
+				color: #bf9343
+				border-bottom-color: #bf9343
+				background-color: rgba(0, 0, 0, 0.1)
+
+@media (min-width: 960px)
+	.home__info
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		width: 35%
+		padding: 1.75em
+
+@media (min-width: 960px)
+	.home__info .profile-image
+		max-width: 145px
+
+@media (max-width: 480px)
+	.home__info .greet-message
+		font-size: 1.50em
+
+.social
+	@extend .text-center
+
+.social__link
+	display: inline-block
+	margin: 0 3px
+	padding: 4px
+	font-size: 0
+	line-height: 1
+	&:hover svg
+		fill: #fff
+	svg
+		width: 20px
+		height: 20px
+		fill: rgba(255, 255, 255, 0.8)
+		transition: fill 0.15s ease-in-out
+
+.site__nav ul
+	list-style: none
+	padding-left: 0
+	margin-top: 0
+	margin-bottom: 1.2em
+	li
+		display: inline-block
+
+.site__nav-item
+	position: relative
+	margin-right: 1.2em
+	font-size: 1.2em
+	font-weight: 900
+	text-transform: uppercase
+	color: #373a3c
+	&:after
+		content: " "
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -5px
+		display: block
+		width: 100%
+		border-bottom: 2px solid #bf9343
+		transform: scale(0)
+		transform-origin: left center
+		transition: transform 0.3s ease-in-out
+	&:focus,
+	&:hover,
+	&:active,
+	&.active
+		text-decoration: none
+		color: #bf9343
+		&:after
+			transform: scale(1)
+
+.home__main
+	flex: 1 0 auto
+	padding: 1.75em
+
+@media (min-width: 960px)
+	.home__main
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 65%
+		padding: 3.75em
+		overflow-x: hidden
+		overflow-y: auto
+
+.home__about,
+.home__blog
+	position: absolute
+	left: 20px
+	height: 0
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	padding: 0 3.75em
+	margin-top: 1em
+	transition: all 0.2s ease-in-out
+	&.is-visible
+		left: 0
+		opacity: 1
+		visibility: visible
+		height: auto
+		overflow: auto
+
+@media (max-width: 960px)
+	.home__about,
+	.home__blog
+		padding: 0 1.75em
+
+.home__about p
+	font-size: 1.13em
+	line-height: 1.5
+	max-width: 700px
+	&:first-of-type
+		margin-top: 0
+
+.home__blog .article:last-child
+	border-bottom: 0
+
+.article
+	display: block
+	padding-bottom: 2em
+	margin-bottom: 2em
+	border-bottom: 1px solid #eee
+	color: #333
+	&:focus,
+	&:hover,
+	&:active
+		text-decoration: none
+		color: #333
+		.article__title
+			color: #9a7635
+
+.article__date
+	margin-top: 0
+	margin-bottom: 0.5em
+	font-size: 0.9em
+	color: #555
+
+.article__title
+	margin-top: 0
+	font-size: 1.5em
+	font-weight: 400
+	transition: color 0.15s ease-in-out
+
+.article__description
+	margin: 0
+	max-width: 700px
+	color: #777

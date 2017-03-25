@@ -1,6 +1,2 @@
-# Build Folders
-sass/
-jade/
-design/
-prepros.cfg
 node_modules/
+local.js
