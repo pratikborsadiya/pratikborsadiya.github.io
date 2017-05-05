@@ -59,6 +59,7 @@
 
 .social
 	@extend .text-center
+	margin-top: 5px
 
 .social__link
 	display: inline-block
@@ -133,7 +134,7 @@
 	overflow: hidden
 	opacity: 0
 	visibility: hidden
-	padding: 0 3.75em
+	padding: 0 3.75em 3.75em
 	margin-top: 1em
 	transition: all 0.2s ease-in-out
 	&.is-visible
@@ -149,10 +150,46 @@
 		padding: 0 1.75em
 
 .home__about p
-	font-size: 1.13em
+	font-size: 18px
 	line-height: 1.5
 	max-width: 700px
 	&:first-of-type
+		margin-top: 0
+
+.information__title
+	font-weight: 400
+	font-size: 20px
+	margin: 40px 0 20px
+	padding-bottom: 0.7em
+	border-bottom: 1px solid #eee
+
+.work-experience
+	margin-bottom: 40px
+
+	.work-experience__company
+		margin-bottom: 12px
+
+	.work-experience__info
+		margin-bottom: 8px
+
+	.work-experience__info,
+	.work-experience__role
+		color: #555
+		margin-top: 0
+		font-size: 17px
+
+.project
+
+	.project__title
+		margin-bottom: 10px
+
+	.project__description
+		color: #555
+		margin-bottom: 8px
+
+	.project__description,
+	.project__cta
+		font-size: 17px
 		margin-top: 0
 
 .home__blog .article:last-child
