@@ -3,15 +3,42 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			options: {
-                livereload: true
-            },
+				livereload: true
+			},
 			scss: {
-				files: ['sass/*.sass', 'sass/**/*.sass'],
-				tasks: ['sass', 'autoprefixer']
+				files: ['**/*.sass', '**/*.scss'],
+				tasks: ['sass', 'postcss']
 			},
 			pug: {
-				files: ['pug/**/*.pug'],
+				files: ['**/*.pug'],
 				tasks: ['pug']
+			}
+		},
+		sass: {
+			dist: {
+				options: {
+					outputStyle: 'compressed',
+					sourceMap: false
+				},
+				files: [{
+					expand: true,
+					cwd: 'sass/',
+					src: ['*.sass'],
+					dest: 'css/',
+					ext: '.css'
+				}]
+			},
+			blog: {
+				options: {
+					outputStyle: 'compressed'
+				},
+				files: [{
+					expand: true,
+					cwd: 'blog/',
+					src: ['**/*.sass', '**/*.scss'],
+					dest: 'blog/',
+					ext: '.css'
+				}]
 			}
 		},
 		pug: {
@@ -28,26 +55,12 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		sass: {
-			dist: {
-				options: {
-					outputStyle: 'compressed',
-					sourceMap: true
-				},
-				files: [{
-					expand: true,
-					cwd: 'sass/',
-					src: ['*.sass'],
-					dest: 'css/',
-					ext: '.css'
-				}]
-			}
-		},
-		autoprefixer: {
+		postcss: {
 			options: {
-				browsers: ['last 2 versions', 'ie 11'],
-				safe: true,
-				map: false
+				map: false,
+				processors: [
+					require('autoprefixer')({browsers: 'last 3 versions'})
+				]
 			},
 			dist: {
 				src: ['css/home.css', 'css/blog.css']
@@ -56,11 +69,11 @@ module.exports = function(grunt) {
 	});
 
 	// Load the Grunt plugins.
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-pug');
-	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-pug');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['sass', 'pug', 'autoprefixer']);
+	grunt.registerTask('build', ['sass', 'pug', 'postcss']);
 };
