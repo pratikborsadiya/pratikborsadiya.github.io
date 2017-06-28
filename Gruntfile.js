@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 				]
 			},
 			dist: {
-				src: ['css/home.css', 'css/blog.css']
+				src: ['css/*.css', 'blog/**/*.css']
 			}
 		}
 	});

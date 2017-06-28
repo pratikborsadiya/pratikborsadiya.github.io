@@ -22,22 +22,81 @@ block content
 		article(itemscope='', itemtype='http://schema.org/Article')
 			meta(itemprop='image', content='http://pratikborsadiya.in/blog/vali-admin/hero-social.png')
 			header
-				h1 Vali Admin
-				p A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
-				p
-					a.btn.btn-primary(href='/vali-admin/', target='_blank') Demo
-					a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/archive/master.zip') Download
-					a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin', target='_blank') GitHub
+				.overlay
+				.info
+					h1 Vali Admin
+					p A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
+					p
+						a.btn.btn-primary(href='/vali-admin/', target='_blank') Demo
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/archive/master.zip') Download
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/issues/new', target='_blank') Report Issue
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin', target='_blank') GitHub
 
-			section.container
-				img.banner-image(src='vali-admin.png', data-action='zoom')
-				h2.section-title Getting started
-				p.info-text Vali is a responsive admin theme built with bootstrap 3, SASS and jade. It's fully modular so you don't have to copy the code which you don't need. Modularity is achieved using component based stylesheet and javascript.
-				p.info-text If you like the theme do share it with your friends. If you have any issues or feedback regarding theme let me know in comments . Pull requests are always welcome.
+			section.article-section
+				img.banner-image(src='vali-admin-banner.gif', data-action='zoom')
+				h2.section-title Introduction
+				p Vali is a free and responsive dashboard theme built with Bootstrap, PugJS and SASS. It's fully customizable and modular. You don't need to add the code, you will not use.
 
-				p Please note that this documetation is under development. A more detailed documentaion will be available soon on this page.
+				p The issue with the most admin themes out there is that if you will see their source code there are a hell lot of external CSS and javascript files in there. And if you try to remove a CSS or Javascript file some things stops working.
 
-			section.container
+				p That's why I made Vali. The goal is, a light weight yet expendable and good looking theme. The theme has all the features required in a dashboard theme but this features are built like plug and play module.
+
+				h2.section-title Directory Structure
+
+				pre.directory-structure.
+					│
+					├── dist - <i>compiled files</i>
+					│   ├── css
+					│   ├── images
+					│   └── js
+					└── src - <i>Layout and style source files</i>
+					    ├── pug - <i>Layout source</i>
+					    └── sass - <i>Style source</i>
+
+				h2.section-title Compilation of source files
+
+				p The theme is built using SASS and PugJs which are in turn compiled into HTML and CSS by Grunt. If you are not familiar with Grunt, #[a(href="https://24ways.org/2013/grunt-is-not-weird-and-hard/", target="_blank") here] is an article to get started. If you are familiar with Grunt follow the instruction mentioned bellow to edit or customize the source. 
+
+				p If you don't want to edit theme you can use the compiled files directly inside #[code dist] folder.
+
+				p Run #[code npm install] command in project root directory to install and build dependencies.
+
+				p Use #[code grunt watch] task to edit and compile source files on the go or use #[code grunt build] task to compile all source files at once.
+
+				h2.section-title Layout Customization
+
+				p The layout is built using PugJs. All the layout source files are located in #[code src/pug] directory. There are two sub directories inside this directory: 
+
+					ol
+						li #[code layout] - It the common HTML skeleton layout which is extended by all the pages
+						li #[code includes] - It include layout partials like sidebar and navbar and footer
+
+				h2.section-title Style Customization
+				p The styles are written in SASS. All the style files are located in #[code src/sass] directory. There is a file in this directory #[code main.sass] which imports all the files and exported as main.css There are four sub directories inside this directory:
+
+					ol
+						li #[code 1-tools] - It includes styles of all the external libraries and a file #[code _var.sass] which contains the variables required for the application
+						li #[code 2-basics] - It contains the basic style like overall structure css and theming options
+						li #[code 3-component] - It contains the styles for the components like card, widgets, sidebar, navbar etc
+						li #[code 4-pages] - It contains the styles for the specific pages like login page, lock-screen page 
+				
+				p To customize the primary color of the theme and sidebar you need to change the variables in the #[code 1-tools/_var.sass]. The detailed documentation about changing the colors is mentioned in this file itself.
+
+				p If you don't want to use particular component or plug-in just comment the import statement for that particular component in #[code src/sass/main.sass] and compile the SASS by running #[code grunt build] command.
+
+				p Please note that the Bootstrap source files in this theme are heavily modified to maintain the look and feel of this theme but the HTML markup remains same for every component. Also Bootstrap Glyphicons in this theme are replaced by Font-Awesome Icons.
+
+				h2.section-title Compatibility with other frameworks
+				p This theme is not built for a specific framework or technology like Angular or React etc. But due to it's modular nature it's very easy to incorporate it into any front-end or back-end framework like Angular, React or VueJs or Node JS. The CSS is modular enough to be incorporated in any framework. While the Javascript used to make the components interactive can be used from any of the following framework.
+
+				p If you are using Angular you can use #[a(href="https://angular-ui.github.io/bootstrap/") ui-bootstrap], for React use #[a(href="https://react-bootstrap.github.io/") React-Bootstrap] and for VueJs you can use #[a(href="https://yuche.github.io/vue-strap/") VueStrap].
+
+				p If you are using Node JS as your web server you can use pug as your layout engine to render html templates. More details are available #[a(href="https://pugjs.org/api/express.html", target="_balnk") here].
+				
+				h2.section-title Contribution
+
+				p If you find anything missing or want to contribute to this documentation, the source is available #[a(href="https://github.com/pratikborsadiya/pratikborsadiya.github.io/tree/master/blog/vali-admin", target="_blank") here]. If you have an issue or feature request regarding theme please report it #[a(href="https://github.com/pratikborsadiya/vali-admin/issues/new", target="_blank") here].
+
 				#disqus_thread
 
 block javascript
