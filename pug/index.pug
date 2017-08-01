@@ -39,15 +39,37 @@ html
 
 				//- About Section
 				.home__about
-					p Hey there, #[br] I am Pratik from Jamnagar, Gujarat.
+					p Hey there, #[br] I am Pratik from Jamnagar, Gujarat, India.
 					p I work at #[a(href='https://gridle.io', target='_blank') Gridle] as a front-end engineer. Developing beautiful interfaces with HTML, CSS and JavaScript is my passion and profession for almost past two years. Being able to help people through the interfaces is the great satisfaction for me.
 
 					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank') Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank') Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank') Great Plains]. I like to play computer games. Some of my favorite are Age Of Empires 3, FarCry-3 & 4, The Witcher series, Assassin’s Creed – Black Flag & Royal Revolt 2.
 
-					h5.information__title Work Experience
+					h5.information__title
+						svg.information__icon: use(xlink:href='#icon-skills')
+						span Skills
+
+					p
+						b Client Side:&nbsp;
+						| HTML, CSS, Javascript, SASS, PugJs, AngularJs, ReactJS, Bootstrap, Grunt, Webpack
+
+					p
+						b Server Side:&nbsp;
+						| NodeJs, Nginx, Linux (Ubuntu), Amazon EC2, Google Cloud Platform
+
+					p
+						b Database:&nbsp;
+						| My SQl, MongoDB
+
+					p
+						b Developer Tools:&nbsp;
+						| Git
+
+					h5.information__title 
+						svg.information__icon: use(xlink:href='#icon-experience')
+						span Work Experience
 
 					.work-experience
-						p.work-experience__company #[b Gridle] - From January 2016 to present
+						p.work-experience__company #[b: a(href="https://gridle.io", target="_blank") Gridle] - From January 2016 to present
 						p.work-experience__info Gridle is a cloud based collaboration tool for teams to communicate effectively.
 						p.work-experience__role My role at Gridle is to make interfaces which help the users to achieve the goal of seamless collaboration. I use HTML, CSS and Javascript to craft the interfaces user can interact with.
 
@@ -55,12 +77,29 @@ html
 						p.work-experience__company #[b Freelance] - From July 2015 to January 2016
 						p.work-experience__role While working as a freelance web developer, I have had the pleasure to help various organizations create their on-line presence by developing their websites and web-based applications to manage their enterprise data.
 
-					h5.information__title Projects
+					h5.information__title
+						svg.information__icon: use(xlink:href='#icon-education')
+						span Education
+
+					P Diploma in computer engineering 2016 - Gujarat Technological University
+
+					h5.information__title
+						svg.information__icon: use(xlink:href='#icon-projects')
+						span Projects
 
 					.project
-						p.project__title: b Vali admin
+						p.project__title: b: a(href="https://gridle.io", target="_blank") Gridle
+						p.project__description Gridle is a cloud based collaboration tool for teams to communicate effectively. My Role at Gridle is to develop web-based user interfaces using HTML, CSS, and JavaScript.
+						p.project__tags
+							b Technologies used:&nbsp;
+							span HTML, CSS, Javascript, SASS, PugJs, AngularJs, Grunt
+
+					.project
+						p.project__title: b: a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank") Vali admin
 						p.project__description A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
-						p.project__cta: a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank") View on GitHub
+						p.project__tags
+							b Technologies used:&nbsp;
+							span HTML, CSS, Javascript, SASS, PugJs, Grunt, Bootstrap
 
 				//- Blog Section
 				.home__blog
