@@ -1,21 +1,11 @@
 extends ../../layouts/_layout-blog.pug
 
-block meta
-	// Twitter meta
-	meta(property='twitter:card', content='summary_large_image')
-	meta(property='twitter:creator', content='@pratikborsadiya')
-
-	// Open Graph Meta
-	meta(property='og:type', content='article')
-	meta(property='og:site_name', content="Pratik Borsadiya's Blog")
-	meta(property='og:title', content="Be awesome with Jade | Pratik Borsadiya's blog")
-	meta(name='description', content='Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.')
-	meta(property='og:url', content='http://pratikborsadiya.in/blog/getting-started-with-jade')
-	meta(property='og:image', content='http://pratikborsadiya.in/blog/getting-started-with-jade/hero-social.png')
-	meta(property='og:description', content='Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.')
-
-block title
-	title Be awesome with Jade | Pratik Borsadiya's blog
+block variables
+	-
+		var article_title = "Be awesome with Jade - Pratik Borsadiya's blog"
+		var article_description = "Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain."
+		var article_url = "http://pratikborsadiya.in/blog/getting-started-with-jade"
+		var article_banner_url = "http://pratikborsadiya.in/blog/getting-started-with-jade/hero-social.png"
 
 block content
 	main.awesome-jade
@@ -23,6 +13,44 @@ block content
 			meta(itemprop='image', content='http://pratikborsadiya.in/blog/getting-started-with-jade/hero-social.png')
 			header.hero
 				h1.article-title(itemprop='name') Be awesome with Jade
+
+			aside.share-nav(data-offset="500")
+				nav
+					a.share-nav__link(
+						href="https://plus.google.com/share?url=" + article_url,
+						title="Share on Google Plus",
+						aria-label="Share on Google Plus",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-gplus')
+					a.share-nav__link(
+						href="https://www.facebook.com/sharer/sharer.php?caption="+ article_title + "&u=" + article_url,
+						title="Share on Facebook",
+						aria-label="Share on Facebook",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-facebook')
+					a.share-nav__link(
+						href="https://twitter.com/intent/tweet?text="+ article_title + "&url=" + article_url,
+						title="Share on Twitter",
+						aria-label="Share on Twitter",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-twitter')
+					a.share-nav__link(
+						href="https://www.linkedin.com/shareArticle?mini=true&url="+ article_url + "&title=" + article_title,
+						title="Share on LinkedIn",
+						aria-label="Share on LinkedIn",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-linkedin')
+					a.share-nav__link(
+						href="mailto:?subject="+ article_title + "&body=" + article_description + article_url,
+						title="Share with Email",
+						aria-label="Share with Email",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-mail')
 
 			section(itemprop='articleSection')
 				p
@@ -46,11 +74,11 @@ block content
 						| Hint: hover over following code and click view compiled button bellow to see the jade code compiled into HTML
 				iframe(height='500', scrolling='no', src='http://codepen.io/pratikborsadiya/embed/EybGXd/?height=500&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 					| See the Pen
-					a(href='http://codepen.io/pratikborsadiya/pen/EybGXd/') A Basic jade demo
+					a(href='http://codepen.io/pratikborsadiya/pen/EybGXd/', target="_blank", rel="noopener") A Basic jade demo
 					|  by Pratik Borsadiya (
-					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					a(href='http://codepen.io/pratikborsadiya', target="_blank", rel="noopener") @pratikborsadiya
 					| ) on
-					a(href='http://codepen.io') CodePen.
+					a(href='http://codepen.io', target="_blank", rel="noopener") CodePen.
 
 			section(itemprop='articleSection')
 				h3.section-title 2. Variables, Loops & Control structure
@@ -61,11 +89,11 @@ block content
 				p Let's see how we can use variables and loops in jade
 				iframe(height='500', scrolling='no', src='//codepen.io/pratikborsadiya/embed/pbpygk/?height=500&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 					| See the Pen
-					a(href='http://codepen.io/pratikborsadiya/pen/pbpygk/')
+					a(href='http://codepen.io/pratikborsadiya/pen/pbpygk/', target="_blank", rel="noopener")
 						| A demonstration of variables, loops and controls structures in Jade	|  by Pratik Borsadiya (
-					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					a(href='http://codepen.io/pratikborsadiya', target="_blank", rel="noopener") @pratikborsadiya
 					| ) on
-					a(href='http://codepen.io') CodePen.
+					a(href='http://codepen.io', target="_blank", rel="noopener") CodePen.
 
 			section(itemprop='articleSection')
 				h3.section-title 3. Mixins
@@ -74,10 +102,10 @@ block content
 				p Let's define a mixin and user it to create some template
 				iframe(height='300', scrolling='no', src='//codepen.io/pratikborsadiya/embed/jAYqaZ/?height=300&theme-id=dark&default-tab=html,result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
 					| See the Pen
-					a(href='http://codepen.io/pratikborsadiya/pen/jAYqaZ/') A basic example of using mixins in Jade	|  by Pratik Borsadiya (
-					a(href='http://codepen.io/pratikborsadiya') @pratikborsadiya
+					a(href='http://codepen.io/pratikborsadiya/pen/jAYqaZ/', target="_blank", rel="noopener") A basic example of using mixins in Jade	|  by Pratik Borsadiya (
+					a(href='http://codepen.io/pratikborsadiya', target="_blank", rel="noopener") @pratikborsadiya
 					| ) on
-					a(href='http://codepen.io') CodePen.
+					a(href='http://codepen.io', target="_blank", rel="noopener") CodePen.
 
 			section(itemprop='articleSection')
 				h3.section-title 4. Template importing & inheritance
@@ -110,25 +138,25 @@ block content
 					| If you liked this post, do share it. Don't forget to leave your comments and feedback in the comment box bellow.
 				p Happy Jading!
 				p  P.S. Jade has been renamed to pug due to a&nbsp;
-					a(href='https://github.com/pugjs/pug/issues/2184', target='_blank') copyright
+					a(href='https://github.com/pugjs/pug/issues/2184', target='_blank', rel="noopener") copyright
 					|  claim. So the future releases of Jade will be named as pug.
 
 			section(itemprop='articleSection')
 				h3.section-title Further reading
 				ul.referances-list
 					li
-						a(href='http://jade-lang.com/', target='_blank') Official site of Jade language
+						a(href='http://jade-lang.com/', target='_blank', rel="noopener") Official site of Jade language
 					li
-						a(href='https://www.youtube.com/watch?v=wzAWI9h3q18', target='_blank') A video to help you get started with Jade
+						a(href='https://www.youtube.com/watch?v=wzAWI9h3q18', target='_blank', rel="noopener") A video to help you get started with Jade
 					li
-						a(href='http://naltatis.github.io/jade-syntax-docs/', target='_blank') In-depth explanation about Jade syntax.
+						a(href='http://naltatis.github.io/jade-syntax-docs/', target='_blank', rel="noopener") In-depth explanation about Jade syntax.
 					li
-						a(href='http://html2jade.org/', target='_blank') A HTML to Jade or vice versa converter
+						a(href='http://html2jade.org/', target='_blank', rel="noopener") A HTML to Jade or vice versa converter
 			section
 				#disqus_thread
 
 block javascript
 	// Scripts
-	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(type='text/javascript', src='/js/transition.js')
 	script(type='text/javascript', src='/js/zoom.min.js')

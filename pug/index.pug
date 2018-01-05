@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en')
 	head
 		title Pratik Borsadiya
 		meta(charset='utf-8')
@@ -20,15 +20,31 @@ html
 				img.profile-image(src='img/pratik-borsadiya.jpg', alt="Pratik Borsadiya's Profile")
 				h1.greet-message Hello, I'm Pratik Borsadiya.
 				p.designation-message Front-End engineer @
-					a(href='https://gridle.io', target='_blank') Gridle
+					a(href='https://gridle.io', target='_blank', rel="noopener") Gridle
 				.social
-					a.social__link(href='https://twitter.com/pratikborsadiya', target='_blank')
+					a.social__link(
+						aria-label="Pratik Borsadiya on Twitter",
+						href='https://twitter.com/pratikborsadiya',
+						target='_blank'
+						rel="noopener")
 						svg: use(xlink:href='#icon-twitter')
-					a.social__link(href='https://www.linkedin.com/in/pratikborsadiya', target='_blank')
+					a.social__link(
+						aria-label="Pratik Borsadiya on Linkedin"
+						href='https://www.linkedin.com/in/pratikborsadiya',
+						target='_blank'
+						rel="noopener")
 						svg: use(xlink:href='#icon-linkedin')
-					a.social__link(href='https://github.com/pratikborsadiya', target='_blank')
+					a.social__link(
+						aria-label="Pratik Borsadiya on GitHub"
+						href='https://github.com/pratikborsadiya',
+						target='_blank'
+						rel="noopener")
 						svg: use(xlink:href='#icon-github')
-					a.social__link(href='https://gitlab.com/pratikborsadiya', target='_blank')
+					a.social__link(
+						aria-label="Pratik Borsadiya on GitLab"
+						href='https://gitlab.com/pratikborsadiya',
+						target='_blank'
+						rel="noopener")
 						svg: use(xlink:href='#icon-gitlab')
 
 			.home__main
@@ -40,9 +56,9 @@ html
 				//- About Section
 				.home__about
 					p Hey there, #[br] I am Pratik from Jamnagar, Gujarat, India.
-					p I work at #[a(href='https://gridle.io', target='_blank') Gridle] as a front-end engineer. Developing beautiful interfaces with HTML, CSS and JavaScript is my passion and profession for almost past two years. Being able to help people through the interfaces is the great satisfaction for me.
+					p I work at #[a(href='https://gridle.io', target='_blank' rel="noopener") Gridle] as a front-end engineer. Developing beautiful interfaces with HTML, CSS and JavaScript is my passion and profession for almost past two years. Being able to help people through the interfaces is the great satisfaction for me.
 
-					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank') Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank') Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank') Great Plains]. I like to play computer games. Some of my favorite are Age Of Empires 3, FarCry-3 & 4, The Witcher series, Assassin’s Creed – Black Flag & Royal Revolt 2.
+					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank' rel="noopener") Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank' rel="noopener") Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank' rel="noopener") Great Plains]. I like to play computer games. Some of my favorite are Age Of Empires 3, FarCry-3 & 4, The Witcher series, Assassin’s Creed – Black Flag & Royal Revolt 2.
 
 					h5.information__title
 						svg.information__icon: use(xlink:href='#icon-skills')
@@ -69,7 +85,7 @@ html
 						span Work Experience
 
 					.work-experience
-						p.work-experience__company #[b: a(href="https://gridle.io", target="_blank") Gridle] - From January 2016 to present
+						p.work-experience__company #[b: a(href="https://gridle.io", target="_blank" rel="noopener") Gridle] - From January 2016 to present
 						p.work-experience__info Gridle is a cloud based collaboration tool for teams to communicate effectively.
 						p.work-experience__role My role at Gridle is to make interfaces which help the users to achieve the goal of seamless collaboration. I use HTML, CSS and Javascript to craft the interfaces user can interact with.
 
@@ -88,14 +104,14 @@ html
 						span Projects
 
 					.project
-						p.project__title: b: a(href="https://gridle.io", target="_blank") Gridle
+						p.project__title: b: a(href="https://gridle.io", target="_blank", rel="noopener") Gridle
 						p.project__description Gridle is a cloud based collaboration tool for teams to communicate effectively. My Role at Gridle is to develop web-based user interfaces using HTML, CSS, and JavaScript.
 						p.project__tags
 							b Technologies used:&nbsp;
 							span HTML, CSS, Javascript, SASS, PugJs, AngularJs, Grunt
 
 					.project
-						p.project__title: b: a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank") Vali admin
+						p.project__title: b: a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank", rel="noopener") Vali admin
 						p.project__description A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
 						p.project__tags
 							b Technologies used:&nbsp;
@@ -103,17 +119,17 @@ html
 
 				//- Blog Section
 				.home__blog
-					a.article(aria-role="article", href="https://medium.com/@pratikborsadiya/appriciate-the-good-deeds-639616491ef6", target="_blank")
+					a.article(role="article", href="https://medium.com/@pratikborsadiya/appriciate-the-good-deeds-639616491ef6", target="_blank", rel="noopener")
 						p.article__date 17 December, 2016
 						h3.article__title Appreciate the good while you disparage the bad
 						p.article__description If you scold a person to make sure that he won’t do the same mistake again, also appreciate him for his good deeds to make sure that it will happen again and again.
 
-					a.article(aria-role="article", href='/blog/vali-admin/')
+					a.article(role="article", href='/blog/vali-admin/')
 						p.article__date 16 December, 2016
 						h3.article__title Freebie : Vali Admin
 						p.article__description A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
 
-					a.article(aria-role="article", href='/blog/getting-started-with-jade/')
+					a.article(role="article", href='/blog/getting-started-with-jade/')
 						p.article__date 15 July, 2016
 						h3.article__title Be awesome with jade
 						p.article__description Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.
@@ -126,6 +142,35 @@ html
 			ga('create', 'UA-72504830-1', 'auto');
 			ga('send', 'pageview');
 
-		//- Scripts
-		script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
-		script(type='text/javascript', src='js/app.js')
+		script(type='text/javascript').
+			var sections = [
+				document.querySelector('.home__about'),
+				document.querySelector('.home__blog')
+			]
+
+			var togglers = [
+				document.querySelector('[data-toggle="about-section"]'),
+				document.querySelector('[data-toggle="article-section"]')
+			]
+
+			function navigateTo(section, toggler) {
+				sections.forEach(function(item) {
+					item.classList.remove('is-visible');
+				});
+				togglers.forEach(function(item) {
+					item.classList.remove('active');
+				});
+				section.classList.add('is-visible');
+				toggler.classList.add('active');
+			}
+
+			document.querySelector('[data-toggle="about-section"]').addEventListener('click', function() {
+				navigateTo(sections[0], togglers[0]);
+			});
+
+			document.querySelector('[data-toggle="article-section"]').addEventListener('click', function() {
+				navigateTo(sections[1], togglers[1]);
+			});
+
+			if (location.hash == "#blog") navigateTo(sections[1], togglers[1]);
+			else navigateTo(sections[0], togglers[0]);

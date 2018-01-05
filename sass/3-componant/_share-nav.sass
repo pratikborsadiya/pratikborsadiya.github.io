@@ -1,0 +1,40 @@
+.share-nav
+	position: relative
+	top: 0
+	max-width: 960px
+	margin-left: auto
+	margin-right: auto
+	transition: top 0.7s
+	@media(min-width: 960px)
+		&.is-stuck
+			position: fixed
+			left: 49vw
+			transform: translate(-50%)
+			width: 100%
+			top: 50vh
+			nav
+				top: -100px
+	nav
+		@media(max-width: 960px)
+			margin-bottom: 20px
+			padding: 0 20px
+		@media(min-width: 960px)
+			position: absolute
+			right: 0
+
+.share-nav__link
+	@media(max-width: 960px)
+		display: inline-block
+		margin-right: 15px
+		height: 25px
+		width: 25px
+	@media(min-width: 960px)
+		display: block
+		margin-bottom: 10px
+		height: 30px
+		width: 30px
+
+.share-nav__icon
+	width: 100%
+	height: 100%
+	fill: #444

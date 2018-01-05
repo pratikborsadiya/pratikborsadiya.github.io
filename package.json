@@ -1,7 +1,11 @@
 {
   "name": "pratikborsadiya.in",
-  "description": "This is Pratik Borsadiya on internet!",
+  "description": "Pratik Borsadiya",
   "author": "Pratik Borsadiya",
+  "scripts": {
+    "dev": "grunt watch",
+    "build": "grunt build"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.0",
     "grunt": "^1.0.1",

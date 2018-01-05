@@ -1,21 +1,11 @@
 extends ../../layouts/_layout-blog.pug
 
-block meta
-	// Twitter meta
-	meta(property='twitter:card', content='summary_large_image')
-	meta(property='twitter:creator', content='@pratikborsadiya')
-
-	// Open Graph Meta
-	meta(property='og:type', content='article')
-	meta(property='og:site_name', content="Pratik Borsadiya's Blog")
-	meta(property='og:title', content="Vali Admin | Pratik Borsadiya's blog")
-	meta(name='description', content="Vali is a free bootstrap based admin dashboard theme. Developed using SASS and JADE it's fully customizable and very lightweight.")
-	meta(property='og:url', content='http://pratikborsadiya.in/blog/vali-admin')
-	meta(property='og:image', content='http://pratikborsadiya.in/blog/vali-admin/hero-social.png')
-	meta(property='og:description', content="Vali is a free bootstrap admin dashboard theme. Developed using SASS and JADE it's fully customizable and very lightweight.")
-
-block title
-	title Vali Admin | Pratik Borsadiya's blog
+block variables
+	-
+		var article_title = "Vali Admin - Pratik Borsadiya's blog"
+		var article_description = "Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular."
+		var article_url = "http://pratikborsadiya.in/blog/vali-admin"
+		var article_banner_url = "http://pratikborsadiya.in/blog/vali-admin/hero-social.png"
 
 block content
 	main.vali-admin
@@ -25,21 +15,57 @@ block content
 				.overlay
 				.info
 					h1 Vali Admin
-					p A free, modular and easy to customize dashboard theme built using Bootstrap, SASS and Pug JS.
+					p Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js.
 					p
 						a.btn.btn-primary(href='/vali-admin/', target='_blank') Demo
-						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/archive/master.zip') Download
-						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/issues/new', target='_blank') Report Issue
-						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin', target='_blank') GitHub
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/archive/master.zip' , rel="noopener") Download
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin/issues/new', target='_blank', rel="noopener") Report Issue
+						a.btn.btn-secondary(href='https://github.com/pratikborsadiya/vali-admin', target='_blank', rel="noopener") GitHub
+
+			aside.share-nav(data-offset="427")
+				nav
+					a.share-nav__link(
+						href="https://plus.google.com/share?url=" + article_url,
+						title="Share on Google Plus",
+						aria-label="Share on Google Plus",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-gplus')
+					a.share-nav__link(
+						href="https://www.facebook.com/sharer/sharer.php?caption="+ article_title + "&u=" + article_url,
+						title="Share on Facebook",
+						aria-label="Share on Facebook",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-facebook')
+					a.share-nav__link(
+						href="https://twitter.com/intent/tweet?text="+ article_title + "&url=" + article_url,
+						title="Share on Twitter",
+						aria-label="Share on Twitter",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-twitter')
+					a.share-nav__link(
+						href="https://www.linkedin.com/shareArticle?mini=true&url="+ article_url + "&title=" + article_title,
+						title="Share on LinkedIn",
+						aria-label="Share on LinkedIn",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-linkedin')
+					a.share-nav__link(
+						href="mailto:?subject="+ article_title + "&body=" + article_description + article_url,
+						title="Share with Email",
+						aria-label="Share with Email",
+						target="_blank"
+						rel="noopener")
+						svg.share-nav__icon: use(xlink:href='#icon-mail')
 
 			section.article-section
-				img.banner-image(src='vali-admin-banner.gif', data-action='zoom')
+				img.banner-image(src='vali-admin-banner.gif', data-action='zoom', alt="Vali banner image")
 				h2.section-title Introduction
-				p Vali is a free and responsive dashboard theme built with Bootstrap, PugJS and SASS. It's fully customizable and modular. You don't need to add the code, you will not use.
+				p Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular. You don't need to add the code, you will not use.
 
-				p The issue with the most admin themes out there is that if you will see their source code there are a hell lot of external CSS and javascript files in there. And if you try to remove a CSS or Javascript file some things stops working.
-
-				p That's why I made Vali. The goal is, a light weight yet expendable and good looking theme. The theme has all the features required in a dashboard theme but this features are built like plug and play module.
+				p Vali is, a light weight yet expendable and good looking theme. The theme has all the features required in a dashboard theme but this features are built like plug and play module.
 
 				h2.section-title Directory Structure
 
@@ -55,13 +81,13 @@ block content
 
 				h2.section-title Compilation of source files
 
-				p The theme is built using SASS and PugJs which are in turn compiled into HTML and CSS by Grunt. If you are not familiar with Grunt, #[a(href="https://24ways.org/2013/grunt-is-not-weird-and-hard/", target="_blank") here] is an article to get started. If you are familiar with Grunt follow the instruction mentioned bellow to edit or customize the source. 
+				p The theme is built using SASS and PugJs which are in turn compiled into HTML and CSS by Grunt. If you are not familiar with Grunt, #[a(href="https://24ways.org/2013/grunt-is-not-weird-and-hard/", target="_blank", rel="noopener") here] is an article to get started. If you are familiar with Grunt follow the instruction mentioned bellow to edit or customize the source. 
 
 				p If you don't want to edit theme you can use the compiled files directly inside #[code dist] folder.
 
 				p Run #[code npm install] command in project root directory to install and build dependencies.
 
-				p Use #[code grunt watch] task to edit and compile source files on the go or use #[code grunt build] task to compile all source files at once.
+				p Use #[code npm run dev] task to edit and compile source files on the go or use #[code npm run build] task to compile all source files at once.
 
 				h2.section-title Layout Customization
 
@@ -82,25 +108,23 @@ block content
 				
 				p To customize the primary color of the theme and sidebar you need to change the variables in the #[code 1-tools/_var.sass]. The detailed documentation about changing the colors is mentioned in this file itself.
 
-				p If you don't want to use particular component or plug-in just comment the import statement for that particular component in #[code src/sass/main.sass] and compile the SASS by running #[code grunt build] command.
-
-				p Please note that the Bootstrap source files in this theme are heavily modified to maintain the look and feel of this theme but the HTML markup remains same for every component. Also Bootstrap Glyphicons in this theme are replaced by Font-Awesome Icons.
+				p If you don't want to use particular component or plug-in just comment the import statement for that particular component in #[code src/sass/main.sass] and compile the SASS by running #[code npm run build] command.
 
 				h2.section-title Compatibility with other frameworks
 				p This theme is not built for a specific framework or technology like Angular or React etc. But due to it's modular nature it's very easy to incorporate it into any front-end or back-end framework like Angular, React or VueJs or Node JS. The CSS is modular enough to be incorporated in any framework. While the Javascript used to make the components interactive can be used from any of the following framework.
 
-				p If you are using Angular you can use #[a(href="https://angular-ui.github.io/bootstrap/") ui-bootstrap], for React use #[a(href="https://react-bootstrap.github.io/") React-Bootstrap] and for VueJs you can use #[a(href="https://yuche.github.io/vue-strap/") VueStrap].
+				p If you are using Angular you can use #[a(href="https://angular-ui.github.io/bootstrap/", rel="noopener") ui-bootstrap], for React use #[a(href="https://react-bootstrap.github.io/", rel="noopener") React-Bootstrap] and for VueJs you can use #[a(href="https://yuche.github.io/vue-strap/", rel="noopener") VueStrap].
 
 				p If you are using Node JS as your web server you can use pug as your layout engine to render html templates. More details are available #[a(href="https://pugjs.org/api/express.html", target="_balnk") here].
-				
+
 				h2.section-title Contribution
 
-				p If you liked the theme do star and fork it on #[a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank") GitHub]. If you find anything missing or want to contribute to this documentation, the source is available #[a(href="https://github.com/pratikborsadiya/pratikborsadiya.github.io/tree/master/blog/vali-admin", target="_blank") here]. If you have an issue or feature request regarding theme please report it #[a(href="https://github.com/pratikborsadiya/vali-admin/issues/new", target="_blank") here].
+				p If you liked the theme do star and fork it on #[a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank", rel="noopener") GitHub]. If you find anything missing or want to contribute to this documentation, the source is available #[a(href="https://github.com/pratikborsadiya/pratikborsadiya.github.io/tree/master/blog/vali-admin", target="_blank", rel="noopener") here]. If you have an issue or feature request regarding theme please report it #[a(href="https://github.com/pratikborsadiya/vali-admin/issues/new", target="_blank", rel="noopener") here].
 
 				#disqus_thread
 
 block javascript
 	// Scripts
-	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+	script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 	script(type='text/javascript', src='/js/transition.js')
 	script(type='text/javascript', src='/js/zoom.min.js')
