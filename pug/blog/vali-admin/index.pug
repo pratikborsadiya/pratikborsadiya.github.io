@@ -83,7 +83,7 @@ block content
 
 				p The theme is built using SASS and PugJs which are in turn compiled into HTML and CSS by Grunt. If you are not familiar with Grunt, #[a(href="https://24ways.org/2013/grunt-is-not-weird-and-hard/", target="_blank", rel="noopener") here] is an article to get started. If you are familiar with Grunt follow the instruction mentioned bellow to edit or customize the source. 
 
-				p If you don't want to edit theme you can use the compiled files directly inside #[code dist] folder.
+				p If you don't want to edit theme you can use the compiled files directly inside #[code docs] folder.
 
 				p Run #[code npm install] command in project root directory to install and build dependencies.
 
@@ -101,14 +101,14 @@ block content
 				p The styles are written in SASS. All the style files are located in #[code src/sass] directory. There is a file in this directory #[code main.sass] which imports all the files and exported as main.css There are four sub directories inside this directory:
 
 					ol
-						li #[code 1-tools] - It includes styles of all the external libraries and a file #[code _var.sass] which contains the variables required for the application
+						li #[code 1-tools] - It includes styles of all the external libraries and a file #[code _var.scss] which contains the variables required for the application
 						li #[code 2-basics] - It contains the basic style like overall structure css and theming options
 						li #[code 3-component] - It contains the styles for the components like card, widgets, sidebar, navbar etc
 						li #[code 4-pages] - It contains the styles for the specific pages like login page, lock-screen page 
 				
-				p To customize the primary color of the theme and sidebar you need to change the variables in the #[code 1-tools/_var.sass]. The detailed documentation about changing the colors is mentioned in this file itself.
+				p To customize the primary color of the theme and sidebar you need to change the variables in the #[code 1-tools/_var.scss]. The detailed documentation about changing the colors is mentioned in this file itself.
 
-				p If you don't want to use particular component or plug-in just comment the import statement for that particular component in #[code src/sass/main.sass] and compile the SASS by running #[code npm run build] command.
+				p If you don't want to use particular component or plug-in just comment the import statement for that particular component in #[code src/sass/main.scss] and compile the SASS by running #[code npm run build] command.
 
 				h2.section-title Compatibility with other frameworks
 				p This theme is not built for a specific framework or technology like Angular or React etc. But due to it's modular nature it's very easy to incorporate it into any front-end or back-end framework like Angular, React or VueJs or Node JS. The CSS is modular enough to be incorporated in any framework. While the Javascript used to make the components interactive can be used from any of the following framework.
