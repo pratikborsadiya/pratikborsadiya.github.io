@@ -117,9 +117,17 @@ block content
 
 				p If you are using Node JS as your web server you can use pug as your layout engine to render html templates. More details are available #[a(href="https://pugjs.org/api/express.html", target="_balnk") here].
 
+				h2.section-title RTL Support
+
+				p To enable RTL support
+					ul
+						li Uncomment this line #[code @import '3-component/rtl';] in #[code src/sass/main.scss]. 
+						li Add #[code dir="rtl"] attribute to #[code &lt;html&gt;] tag in #[code src/pug/layouts/_layout.pug].
+						li Build the source files using #[code npm run build] command.
+
 				h2.section-title Contribution
 
-				p If you liked the theme do star and fork it on #[a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank", rel="noopener") GitHub]. If you find anything missing or want to contribute to this documentation, the source is available #[a(href="https://github.com/pratikborsadiya/pratikborsadiya.github.io/tree/master/blog/vali-admin", target="_blank", rel="noopener") here]. If you have an issue or feature request regarding theme please report it #[a(href="https://github.com/pratikborsadiya/vali-admin/issues/new", target="_blank", rel="noopener") here].
+				p If you liked the theme do star and fork it on #[a(href="https://github.com/pratikborsadiya/vali-admin", target="_blank", rel="noopener") GitHub]. If you find anything missing or want to contribute to this documentation, the source is available #[a(href="https://github.com/pratikborsadiya/pratikborsadiya.github.io/blob/master/pug/blog/vali-admin/index.pug", target="_blank", rel="noopener") here]. If you have an issue or feature request regarding theme please report it #[a(href="https://github.com/pratikborsadiya/vali-admin/issues/new", target="_blank", rel="noopener") here].
 
 				#disqus_thread
 
