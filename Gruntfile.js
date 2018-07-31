@@ -1,3 +1,4 @@
+const sass = require('node-sass');
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -17,6 +18,7 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
+					implementation: sass,
 					outputStyle: 'compressed',
 					sourceMap: false
 				},
@@ -30,6 +32,7 @@ module.exports = function(grunt) {
 			},
 			blog: {
 				options: {
+					implementation: sass,
 					outputStyle: 'compressed'
 				},
 				files: [{
