@@ -72,27 +72,15 @@ code {
 	font-weight: 400;
 	border-radius: 4px;
 	text-decoration: none;
-}
-.btn:hover,
-.btn:focus { text-decoration: none; }
-.btn-primary {
 	color: #fff;
-	border: 1px solid #bf9343;
-	background-color: #bf9343;
-	transition: background-color 0.3s ease-in-out;
-}
-.btn-primary:focus,
-.btn-primary:hover {
-	background-color: #bf9343;
-	border-color: #bf9343;
-	color: #fff;
-}
-.btn-secondary {
-	border: 1px solid #cca969;
+	border: 1px solid #fff;
 	background-color: transparent;
 	transition: background-color 0.15s ease-in-out;
 }
-.btn-secondary:hover {
+
+.btn:hover,
+.btn:focus {
+	text-decoration: none;
 	color: #fff;
 	background-color: #bf9343;
 	border-color: #bf9343;

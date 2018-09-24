@@ -61,8 +61,8 @@ html(lang='en')
 					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank' rel="noopener") Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank' rel="noopener") Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank' rel="noopener") Great Plains]. I like to play computer games.
 
 					h5.information__title
-						svg.information__icon: use(xlink:href='#icon-skills')
 						span Skills
+						svg.information__icon: use(xlink:href='#icon-skills')
 
 					p
 						b Client Side:&nbsp;
@@ -77,18 +77,17 @@ html(lang='en')
 						| Git, Grunt, Gulp, Webpack, NPM, Docker
 
 					h5.information__title 
-						svg.information__icon: use(xlink:href='#icon-experience')
 						span Work Experience
+						svg.information__icon: use(xlink:href='#icon-experience')
 
 					.work-experience
-						p.work-experience__company #[b Gridle - Senior Frontend Developer] - From January 2018 to present
-						p.work-experience__info I am a Senior frontend developer in IT services section of the company. My responsibilities include:
+						p.work-experience__company #[b Gridle - Senior Frontend Developer] - From January 2018 to August 2018
+						p.work-experience__info I am a Senior frontend developer in IT services section of the company. My responsibilities included:
 						ul.work-experience__role
-							li Advising the business team on cost and effort estimation regarding front-end development of various projects.
+							li Develop modern web-applications to solve the problems of our clients using Angular.js, React/Redux, Node.js JavaScript, HTML5 and CSS3.
 							li Architect frontend of the projects being implemented by the company with focus on maintainability and performance in mind.
 							li Standardizing front-end programming practices and having them implemented so that the projects are more maintainable and easy to explain to the newer project members.
 							li Helping and mentoring junior members of the frontend team by reviewing and advising them for possible improvements in the code they have written.
-
 
 					.work-experience
 						p.work-experience__company #[b: a(href="https://gridle.io", target="_blank" rel="noopener") Gridle - Frontend Developer] - From January 2016 to December 2017
@@ -103,15 +102,16 @@ html(lang='en')
 						p.work-experience__role I have helped various small business enterprises to store and manage their customer data by creating various web based applications.
 
 					h5.information__title
-						svg.information__icon: use(xlink:href='#icon-education')
 						span Education
+						svg.information__icon: use(xlink:href='#icon-education')
 
-					P Diploma in Computer Engineering - From 2012 - 2015
 					p: b Gujarat Technological University
+					p Government Polytechnic College - Ahmedabad
+					p Diploma in Computer Engineering - 2012 - 2015
 
 					h5.information__title
-						svg.information__icon: use(xlink:href='#icon-projects')
 						span Projects
+						svg.information__icon: use(xlink:href='#icon-projects')
 
 					.project
 						p.project__title: b: a(href="https://gridle.io", target="_blank", rel="noopener") Gridle
@@ -145,7 +145,7 @@ html(lang='en')
 						p.article__description Jade is an awesome templating engine built on top of Node js. It allows you to rapidly build HTML templates that are modular, easy to code and maintain.
 
 		script(type='text/javascript').
-			if(document.location.hostname == 'pratikborsadiya.in') {
+			if(location.hostname == 'pratikborsadiya.in') {
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -160,29 +160,29 @@ html(lang='en')
 				document.querySelector('.home__blog')
 			]
 
-			var togglers = [
+			var navItems = [
 				document.querySelector('[data-toggle="about-section"]'),
 				document.querySelector('[data-toggle="article-section"]')
 			]
 
-			function navigateTo(section, toggler) {
+			function navigateTo(section, navItem) {
 				sections.forEach(function(item) {
 					item.classList.remove('is-visible');
 				});
-				togglers.forEach(function(item) {
+				navItems.forEach(function(item) {
 					item.classList.remove('active');
 				});
 				section.classList.add('is-visible');
-				toggler.classList.add('active');
+				navItem.classList.add('active');
 			}
 
-			document.querySelector('[data-toggle="about-section"]').addEventListener('click', function() {
-				navigateTo(sections[0], togglers[0]);
+			navItems[0].addEventListener('click', function() {
+				navigateTo(sections[0], navItems[0]);
 			});
 
-			document.querySelector('[data-toggle="article-section"]').addEventListener('click', function() {
-				navigateTo(sections[1], togglers[1]);
+			navItems[1].addEventListener('click', function() {
+				navigateTo(sections[1], navItems[1]);
 			});
 
-			if (location.hash == "#blog") navigateTo(sections[1], togglers[1]);
-			else navigateTo(sections[0], togglers[0]);
+			if (location.hash == "#blog") navigateTo(sections[1], navItems[1]);
+			else navigateTo(sections[0], navItems[0]);

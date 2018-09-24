@@ -36,8 +36,6 @@
 			&:hover,
 			&:active
 				text-decoration: none
-				color: #bf9343
-				border-bottom-color: #bf9343
 				background-color: rgba(0, 0, 0, 0.1)
 
 @media (min-width: 960px)
@@ -87,7 +85,7 @@
 	position: relative
 	margin-right: 1.2em
 	font-size: 1.2em
-	font-weight: 900
+	font-weight: 700
 	text-transform: uppercase
 	color: #373a3c
 	&:after
@@ -98,7 +96,7 @@
 		bottom: -5px
 		display: block
 		width: 100%
-		border-bottom: 2px solid #bf9343
+		border-bottom: 2px solid $primary-color
 		transform: scale(0)
 		transform-origin: left center
 		transition: transform 0.3s ease-in-out
@@ -107,7 +105,7 @@
 	&:active,
 	&.active
 		text-decoration: none
-		color: #bf9343
+		color: $primary-color
 		&:after
 			transform: scale(1)
 
@@ -149,12 +147,9 @@
 	.home__blog
 		padding: 0 1.75em
 
-.home__about p
-	font-size: 16px
+.home__about
 	line-height: 1.5
-	max-width: 700px
-	&:first-of-type
-		margin-top: 0
+	max-width: 850px
 
 .information__title
 	display: flex
@@ -171,37 +166,34 @@
 	width: 25px
 	height: 25px
 	margin-left: 10px
-	order: 2
 
 .work-experience
 	margin-bottom: 40px
 
-	.work-experience__company
-		margin-bottom: 12px
+.work-experience__company
+	margin-bottom: 12px
 
-	.work-experience__info
-		margin-bottom: 8px
+.work-experience__info
+	margin-bottom: 8px
 
-	.work-experience__info,
-	.work-experience__role
-		color: #444
-		margin-top: 0
+.work-experience__info,
+.work-experience__role
+	margin-top: 0
 
 .project
 	margin-bottom: 20px
 
-	.project__title
-		margin-bottom: 10px
+.project__title
+	margin-bottom: 10px
 
-	.project__tags,
-	.project__description
-		color: #555
-		margin-bottom: 8px
+.project__tags,
+.project__description
+	margin-bottom: 8px
 
-	.project__tags,
-	.project__description,
-	.project__cta
-		margin-top: 0
+.project__tags,
+.project__description,
+.project__cta
+	margin-top: 0
 
 .home__blog .article:last-child
 	border-bottom: 0
@@ -211,28 +203,27 @@
 	padding-bottom: 2em
 	margin-bottom: 2em
 	border-bottom: 1px solid #eee
-	color: #333
+	color: currentColor
 	&:focus,
 	&:hover,
 	&:active
 		text-decoration: none
 		color: #333
 		.article__title
-			color: #9a7635
+			color: $primary-color
 
 .article__date
 	margin-top: 0
 	margin-bottom: 0.5em
 	font-size: 0.9em
-	color: #555
 
 .article__title
 	margin-top: 0
-	font-size: 1.5em
+	font-size: 1.3em
 	font-weight: 400
 	transition: color 0.15s ease-in-out
 
 .article__description
 	margin: 0
 	max-width: 700px
-	color: #777
+	color: $muted-text-color
