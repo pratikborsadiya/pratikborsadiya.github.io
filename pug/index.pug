@@ -5,7 +5,7 @@ html(lang='en')
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(name="description", content="Frontend Engineer, From Amrapur, Jamnagar, Gujarat. I like music, nature, computer and computer games.")
+		meta(name="description", content="Software Engineer, From Amrapur, Jamnagar, Gujarat. I like music, nature, computer and computer games.")
 		meta(name='google-site-verification', content='DzGF1wORJHztgVQ9T_p88R5LuxQwf4_dr2c02Cfz_ug')
 
 		//- CSS
@@ -17,35 +17,35 @@ html(lang='en')
 
 		main.home
 			.home__info
-				img.profile-image(src='img/pratik-borsadiya.jpg', alt="Pratik Borsadiya's Profile")
-				h1.greet-message Hello, I'm Pratik Borsadiya.
-				p.designation-message Senior Front-End engineer @
-					a(href='https://gridle.io', target='_blank', rel="noopener") Gridle
+				img.home__info-profile(src='img/pratik-borsadiya.jpg', alt="Pratik Borsadiya's Profile")
+				h1.home__info-greet Hello, I'm Pratik Borsadiya.
+				p.home__info-designation Full Stack engineer @
+					a(href='https://www.byteprophecy.com', target='_blank', rel="noopener") ByteProphecy
 				.social
 					a.social__link(
 						aria-label="Pratik Borsadiya on Twitter",
 						href='https://twitter.com/pratikborsadiya',
 						target='_blank'
 						rel="noopener")
-						svg: use(xlink:href='#icon-twitter')
+						svg.social__link-icon: use(xlink:href='#icon-twitter')
 					a.social__link(
 						aria-label="Pratik Borsadiya on Linkedin"
 						href='https://www.linkedin.com/in/pratikborsadiya',
 						target='_blank'
 						rel="noopener")
-						svg: use(xlink:href='#icon-linkedin')
+						svg.social__link-icon: use(xlink:href='#icon-linkedin')
 					a.social__link(
 						aria-label="Pratik Borsadiya on GitHub"
 						href='https://github.com/pratikborsadiya',
 						target='_blank'
 						rel="noopener")
-						svg: use(xlink:href='#icon-github')
+						svg.social__link-icon: use(xlink:href='#icon-github')
 					a.social__link(
 						aria-label="Pratik Borsadiya on GitLab"
 						href='https://gitlab.com/pratikborsadiya',
 						target='_blank'
 						rel="noopener")
-						svg: use(xlink:href='#icon-gitlab')
+						svg.social__link-icon: use(xlink:href='#icon-gitlab')
 
 			.home__main
 				nav.site__nav
@@ -56,7 +56,7 @@ html(lang='en')
 				//- About Section
 				.home__about
 					p Hey there, #[br] I am Pratik from Jamnagar, Gujarat, India.
-					p I work at #[a(href='https://gridle.io', target='_blank' rel="noopener") Gridle] as a senior front-end engineer. Developing beautiful and usable products with HTML, CSS and JavaScript is my passion and profession for almost past three years. I am also passionate about Linux and FOSS.
+					p I work at #[a(href='https://www.byteprophecy.com/', target='_blank' rel="noopener") ByteProphecy] as a full stack engineer. Developing beautiful and usable products with HTML, CSS and JavaScript is my passion and profession for almost past three years. I am also passionate about Linux and FOSS.
 
 					p When I am not at work, I like to contribute to open source projects. Occasionally I can be found wandering at #[a(href='http://farcry.wikia.com/wiki/Rook_Islands', target='_blank' rel="noopener") Rook Islands], #[a(href='http://farcry.wikia.com/wiki/Kyrat', target='_blank' rel="noopener") Kyrat] or #[a(href='http://ageofempires.wikia.com/wiki/Great_Plains', target='_blank' rel="noopener") Great Plains]. I like to play computer games.
 
@@ -81,8 +81,14 @@ html(lang='en')
 						svg.information__icon: use(xlink:href='#icon-experience')
 
 					.work-experience
+						p.work-experience__company #[b: a(href='https://www.byteprophecy.com/', target="_blank" rel="noopener") ByteProphecy - Full Stack developer] - From October 2018 to present
+						p.work-experience__info I am a Full Stack developer at the company. My responsibilities includes:
+						ul.work-experience__role
+							li Develop data dashboards using React.JS, D3.JS and Node.JS 
+
+					.work-experience
 						p.work-experience__company #[b Gridle - Senior Frontend Developer] - From January 2018 to August 2018
-						p.work-experience__info I am a Senior frontend developer in IT services section of the company. My responsibilities included:
+						p.work-experience__info I was a Senior frontend developer in IT services section of the company. My responsibilities included:
 						ul.work-experience__role
 							li Develop modern web-applications to solve the problems of our clients using Angular.js, React/Redux, Node.js JavaScript, HTML5 and CSS3.
 							li Architect frontend of the projects being implemented by the company with focus on maintainability and performance in mind.

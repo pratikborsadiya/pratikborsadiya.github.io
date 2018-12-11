@@ -15,23 +15,24 @@
 	padding: 3em 1.75em
 	background-color: #291b2c
 	color: #fff
-	.profile-image
+	&-profile
 		width: 100%
 		max-width: 100px
 		border-radius: 4px
 		box-shadow: 0 5px 10px #291b2c
-	.greet-message
+	&-greet
 		font-weight: 400
 		font-size: 1.9em
 		margin: 1em 0 0.1em
-	.designation-message
-		font-family: 'Inconsolata', Consolas, monospace
-		font-size: 1.125em
+
+	&-designation
+		font-size: 1em
+		font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 		a
 			padding: 4px
 			border-bottom: 1px solid #fff
 			color: #fff
-			transition: all 0.3s ease-in-out
+			transition: background-color 0.3s ease-in-out
 			&:focus,
 			&:hover,
 			&:active
@@ -61,13 +62,17 @@
 
 .social__link
 	display: inline-block
-	margin: 0 3px
-	padding: 4px
+	padding: 8px
 	font-size: 0
 	line-height: 1
-	&:hover svg
-		fill: #fff
-	svg
+	border-radius: 4px
+	background-color: transparent
+	transition: background-color 0.3s
+	&:hover
+		background-color: rgba(0,0,0,0.2)
+		.social__link-icon
+			fill: #fff
+	&-icon
 		width: 20px
 		height: 20px
 		fill: rgba(255, 255, 255, 0.8)
