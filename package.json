@@ -3,7 +3,7 @@
   "description": "Pratik Borsadiya",
   "author": "Pratik Borsadiya",
   "scripts": {
-    "dev": "grunt watch",
+    "dev": "grunt watch & node node-dev-server.js",
     "build": "grunt build"
   },
   "devDependencies": {
