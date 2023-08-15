@@ -1,4 +1,4 @@
-// Node JS development server for Vali Admin
+// Node JS development server for local development
 
 var http = require("http"),
 	url = require("url"),
